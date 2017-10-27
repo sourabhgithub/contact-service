@@ -1,0 +1,12 @@
+databaseChangeLog:
+- changeSet:
+    id: personcontact
+    author: Sourabh Vemra
+    changes:
+    - sqlFile:
+        path: Create-PERSON_CONTACT.sql
+        relativeToChangelogFile: true
+    - loadData:
+        file: db/changelog/PERSON_CONTACT.csv
+        tableName: PERSON_CONTACT
+        quotchar: '"'
