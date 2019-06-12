@@ -24,11 +24,60 @@ mvn clean package && java -jar target\contact-service-1.0.0-SNAPSHOT.war
 
 On Mac or Linux:
 
+
+
 ```
 mvn spring-boot:run
 ```
 
 This will start the application on your local machine on port 8080 using an in-memory database..
+
+### Application Contact-Service Endpoints
+GET - http://localhost:8080/contacts
+PUT - http://localhost:8080/contacts/{id}
+POST - http://localhost:8080/contacts
+DELETE - http://localhost:8080/contacts/{id}
+
+#### Request Payloads
+POST: ```{
+    "name": "Sourabh",
+    "company": "ABC Company",
+    "profileImage": "new",
+    "birthDate": "198310-01",
+    "phoneNumber": {
+        "workNumber": "1111111112",
+        "personalNumber": "1111111112"
+    },
+    "email":"sourabhkumar.verma@gmail.com",
+    "address": {
+        "addressLine": "149 WOODLAKE BLVD",
+        "city": "gurnee",
+        "state": "il",
+        "zipCode": "60031",
+        "countryCode": "US"
+    }
+}```
+
+PUT : ```{
+    "name": "Sourabh",
+    "company": "ABC Company",
+    "profileImage": "new",
+    "birthDate": "198310-01",
+    "phoneNumber": {
+        "workNumber": "1111111112",
+        "personalNumber": "1111111112"
+    },
+    "email":"sourabhkumar.verma@gmail.com",
+    "address": {
+        "addressLine": "149 WOODLAKE BLVD",
+        "city": "gurnee",
+        "state": "il",
+        "zipCode": "60031",
+        "countryCode": "US"
+    }
+}```
+
+     
 
 ### Managing the local database
 
